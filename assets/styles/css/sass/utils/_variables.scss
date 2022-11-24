@@ -1,0 +1,18 @@
+$color-primary: #9356DC;
+$color-primary-light:lighten(#9356DC,5%);
+$background-primary-light:lighten(#9356DC,35%);
+$color-secondary: #FF79DA;
+$color-secondary-light:lighten(#FF79DA,5%);
+$color-tertiary: #99E2D0;
+$color-tertiary-dark: darken(#99E2D0,5%);
+$color-txt-dark: #2A2A2A;
+$color-txt-light: #f3f3f3;
+$btn-primary: linear-gradient(to top left,$color-primary,$color-secondary);
+$btn-primary_hover: linear-gradient(to top left,$color-primary-light,$color-secondary-light);
+$breakpoint-mobile: 410px;
+$breakpoint-mobile-xl: 576px;
+$breakpoint-mobile-xl-max: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-max: 1023px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-xl: 1400px;

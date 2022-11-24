@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - OhMyFood</title>
+    <link rel="stylesheet" href="../assets/styles/css/public/main.css">
+    <link rel="icon" href="../assets/images/logo/favicon.ico" />
+</head>
+
+<body>
+    <header class="__logo">
+        <a href="../index.html"><img class="__return" src="../assets/images/icones/fleche.svg" alt="retour"></a>
+        <div class="navoff">
+            <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+            <nav>
+                <a href="#">Mon compte</a>
+                <a href="#">Mes favoris</a>
+                <a href="#">Mes commandes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="ctr-menu bg1">
+        <figure class="cont_image-xl">
+            <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo de plats">
+        </figure>
+        <section class="card__menu">
+            <div class="card__menu__titre">
+                <h1>La palette du goût</h1>
+            </div>
+            <div class="card__desc__favoris">
+                <input type="checkbox" class="like" id="like_1">
+                <label class="colorHeart" for="like_1">
+                    <img src="../assets/images/icones/coeur.png" alt="no-color">
+                    <img src="../assets/images/icones/coeur-col.png" alt="color">
+                </label>
+            </div>
+        </section>
+        <div class="move_cat">
+            <div class="categorie">
+                <p>ENTRÉES</p>
+                <div class="__plat">
+                    <label for="item_1">Fricasée d'escargot<br><span>Au piment d'Espelette</span></label>
+                    <span>25€</span>
+                    <input type="checkbox" class="items" id="item_1" name="item_1">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+                <div class="__plat">
+                    <label for="item_2">Foie gras de canard mi-cuit<br><span>Et ses copeaux de truffe
+                            noire</span></label>
+                    <span>35€</span>
+                    <input type="checkbox" class="items" id="item_2" name="item_2">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+                <div class="__plat">
+                    <label for="item_3">Oeuf au plat<br><span>assaisonné à la truffe sur lit de caviar</span></label>
+                    <span>20€</span>
+                    <input type="checkbox" class="items" id="item_3" name="item_3">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+            </div>
+            <div class="categorie">
+                <p>PLATS</p>
+                <div class="__plat">
+                    <label for="item_4">Filet de boeuf aux herbes<br><span>Accompagné de sa ribambelle de
+                            légumes</span></label>
+                    <span>40€</span>
+                    <input type="checkbox" class="items" id="item_4" name="item_4">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+                <div class="__plat">
+                    <label for="item_5">Parmentier de queue de boeuf<br><span>À la truffe noire sur sa purée de
+                            panais</span></label>
+                    <span>35€</span>
+                    <input type="checkbox" class="items" id="item_5" name="item_5">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+                <div class="__plat">
+                    <label for="item_6">Filet de turbot<br><span>Aux agrumes</span></label>
+                    <span>44€</span>
+                    <input type="checkbox" class="items" id="item_6" name="item_6">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+            </div>
+            <div class="categorie">
+                <p>DESSERTS</p>
+                <div class="__plat">
+                    <label for="item_7">Paris-Brest<br><span>Revisité</span></label>
+                    <span>18€</span>
+                    <input type="checkbox" class="items" id="item_7" name="item_7">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+                <div class="__plat">
+                    <label for="item_8">Macaron au chocolat d'exception<br><span>Et glace à la vanille de
+                            Madagascar</span></label>
+                    <span>22€</span>
+                    <input type="checkbox" class="items" id="item_8" name="item_8">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+                <div class="__plat">
+                    <label for="item_9">Mousse au chocolat<br><span>Au piment d'Espelette et à la truffe
+                            noire</span></label>
+                    <span>23€</span>
+                    <input type="checkbox" class="items" id="item_9" name="item_9">
+                    <div class="hide">
+                        <img src="../assets/images/icones/check.svg" alt="check">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="divBtn">
+            <a href="#" class="btn primary" >Commander</a>
+        </span>
+    </main>
+    <footer>
+        <h2 id="footer">ohmyfood</h2>
+        <ul>
+            <li>
+                <img src="../assets/images/icones/couverts.svg" alt="restaurants">
+                <p><a href="#">Proposer un restaurant</a></p>
+            </li>
+            <li>
+                <img src="../assets/images/icones/partenaire.svg" alt="Partenaire">
+                <p><a href="#">Devenir partenaire</a></p>
+            </li>
+            <li>
+                <p><a href="#">Mentions légales</a></p>
+            </li>
+            <li>
+                <p><a href="mailto:contact@ohmyfood.com"> Contact</a></p>
+            </li>
+        </ul>
+        <div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+footer{
+    padding: 1em;
+    background:$color-txt-dark;
+    color: $color-txt-light;
+    & h2{
+        @include family('title',1.6em);
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+    & ul{
+        list-style: none;
+        padding-left: 0;
+        font-size: .8em;
+    }
+    & li{
+        @include flex-mix(start,center);
+        height:35px;
+        & img{
+            width:20px;
+            margin-right: .8em;
+        }
+        & a{
+            color: lighten($color-txt-light,100%);
+            text-decoration: none;
+        }
+
+    }
+}

@@ -1,0 +1,25 @@
+.divBtn{
+    @include flex-mix(center,center);
+    @include padding-y(2em,1em);
+    background: $color-txt-light;
+    width:100%;
+    &>.btn{
+        @include shadow;
+        @include family("regular",1em);
+        text-decoration: none;
+        color: #fff;
+        background: $btn-primary;
+        padding:1em 3em;
+        border: none;
+        border-radius:25px;
+        transition: all 0.5s ease-in-out;
+        &.primary:active {
+            @include btn-act();
+        }
+        &.primary:hover {
+            @media (min-width: $breakpoint-desktop){
+                @include btn-act();
+            } 
+        }
+    }
+}

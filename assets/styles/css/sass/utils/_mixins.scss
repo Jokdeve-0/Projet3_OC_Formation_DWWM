@@ -1,0 +1,81 @@
+@mixin family($style,$size){
+    font-family: $style, sans-serif;
+    font-size:$size;
+}
+@mixin shadow{
+    box-shadow: 0px 2px 10px rgb(151, 151, 151);
+}
+@mixin shadow-hover{
+    box-shadow: 0px 2px 10px rgb(82, 82, 82);
+}
+@mixin flex-mix($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin taille($width,$height){
+    width: $width;
+    height: $height;
+}
+@mixin margin-x($left,$right){
+    margin-left: $left;
+    margin-right: $right;
+}
+@mixin margin-y($top,$bottom){
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+@mixin padding-y($top,$bottom){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+@mixin card-img($img){
+    background-image: url($img);
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+@mixin btn-act(){
+    background: $btn-primary_hover;
+    @include shadow-hover;
+}
+@mixin logo-resp($break,$pad,$width){
+    @media (min-width:$break) {
+        padding-left: $pad;
+        width: $width;
+    }
+}
+@mixin width-resp($break,$width){
+    @media (min-width: $break) {
+        width:$width;
+    }
+}
+@mixin btn-return($break,$t1,$t2,$t,$l){
+    @media (min-width:$break) {
+        @include taille($t1,$t2);
+        left: $l;
+        top: $t;
+    }
+}
+@mixin menu-width($break,$width){
+    @media(min-width:$break){
+        width:$width;
+        @if($break == $breakpoint-tablet){
+            @include shadow;
+        }
+    }
+}
+@mixin back-img(){
+    $c_img:1;
+    @each $img in $images {
+        $select:"bg#{$c_img}";
+        &.#{$select}{
+            background-image: $img;
+            background-size: 100%;
+            background-repeat: repeat;
+        }
+        $c_img:$c_img+1;
+    }
+}

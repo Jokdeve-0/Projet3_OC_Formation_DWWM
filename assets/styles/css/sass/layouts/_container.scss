@@ -1,0 +1,252 @@
+.location {
+    @include flex-mix(center, center);
+    background: lighten($color-txt-dark, 70%);
+
+    & img {
+        @include taille(1.8em, 1.8em);
+        margin: 0 0 -5px -15px;
+    }
+
+    & p {
+        @include family('regular', .8em);
+    }
+}
+
+.title {
+    padding: 1rem 1rem 2em;
+    text-align: center;
+    background: $color-txt-light;
+}
+
+.fonct {
+    padding-bottom: 2em;
+
+    & h2 {
+        padding-left: .8em;
+
+        @media (min-width:$breakpoint-tablet) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__container {
+        @include flex-mix(start, center);
+        @include shadow;
+        @include padding-y(.2em, .3em);
+        width: 80%;
+        max-width: 700px;
+        margin: 1em auto;
+        background: $color-txt-light;
+        border-radius: 15px;
+        font-size: 0.8em;
+
+        & span {
+            @include flex-mix(center, center);
+            @include taille(25px, 25px);
+            color: $color-txt-light;
+            margin-left: -.8em;
+            border-radius: 50%;
+            background: $color-primary;
+        }
+
+        & img {
+            @include taille(25px, 25px);
+            margin-left: .8em;
+        }
+
+        & p {
+            @include family('regular', 1em);
+            margin-left: .6em;
+        }
+
+        &--mod {
+            background: $background-primary-light;
+
+            @media (min-width: $breakpoint-desktop) {
+                background: $color-txt-light;
+            }
+        }
+    }
+
+    &__container:hover {
+        @media (min-width: $breakpoint-desktop) {
+            background: $background-primary-light;
+            @include shadow-hover;
+        }
+    }
+
+    @media (min-width:$breakpoint-tablet) {
+        @include flex-mix(center, center);
+        flex-flow: row wrap;
+
+        &__container {
+            width: 30%;
+        }
+
+    }
+
+    @media (min-width:$breakpoint-desktop) {
+        &__container {
+            width: 25%;
+        }
+
+    }
+}
+
+#restos {
+    @include padding-y(1em, 1em);
+    background: $color-txt-light;
+
+    &>h2 {
+        padding-left: 0.8em;
+        font-size: 1.6em;
+
+        @media (min-width:$breakpoint-tablet) {
+            text-align: center;
+        }
+    }
+
+    $count_i:1;
+
+    @each $img in $images {
+        & .card:nth-child(#{$count_i}) {
+            & .card__top {
+                @include card-img($img);
+            }
+        }
+
+        $count_i: $count_i+1;
+    }
+}
+
+.container-card {
+    @media (min-width: $breakpoint-mobile-xl) {
+        @include flex-mix(center, center);
+        flex-flow: row wrap;
+
+        & .card {
+            max-width: 500px;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        & .card {
+            @include margin-y(1em, 1em);
+            @include margin-x(1em, 1em);
+
+            max-width: 340px;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        & .card {
+            max-width: 450px;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop-xl) {
+        & .card {
+            max-width: 300px;
+        }
+    }
+}
+
+.card {
+    width: 90%;
+    height: 230px;
+    margin: 1em auto;
+    border-radius: 25px;
+    @include shadow;
+
+    & a {
+        color: $color-tertiary-dark;
+        text-decoration: none;
+    }
+
+    &__top {
+        @include flex-mix(center, flex-start);
+        height: 75%;
+        width: 100%;
+
+        & p {
+            width: 100%;
+            text-align: end;
+            padding: 1.5em;
+            margin: 0;
+            font-size: .8em;
+            font-weight: bold;
+        }
+
+        & span {
+            padding: 0.5em 1.5em;
+            color: darken($color-tertiary, 40%);
+            background: $color-tertiary;
+            border-radius: 3px;
+        }
+
+    }
+
+    &__desc {
+        @include flex-mix(start, center);
+        padding-left: 1em;
+        height: 25%;
+
+        &__titre {
+            width: 90%;
+
+            & h3 {
+                @include margin-y(5px, 0);
+            }
+
+            & p {
+                margin: 0;
+                @include padding-y(0, 10px);
+            }
+        }
+
+        &__favoris {
+            padding-bottom: 1.5em;
+            padding-right: 1em;
+            width: 10%;
+
+            & img {
+                @include taille(20px, 20px);
+                position: absolute;
+                transform-origin: bottom center;
+                cursor: pointer;
+                transition: all 0.8s ease-in-out;
+                animation-fill-mode: forwards;
+            }
+
+            & img:last-child {
+                transform: scale(0);
+            }
+
+            & .colorHeart {
+                display: inline;
+
+                &:hover img:last-child {
+                    @media (min-width: $breakpoint-desktop) {
+                        font-weight: bold;
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            .like {
+                position: absolute;
+                visibility: hidden;
+            }
+
+            & .like:checked+.colorHeart {
+
+                & img:last-child {
+                    font-weight: bold;
+                    transform: scale(1);
+                }
+            }
+
+        }
+    }
+}

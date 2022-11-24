@@ -1,0 +1,23 @@
+#spin{
+    @include flex-mix(space-around,center);
+    flex-direction: column;
+    position: absolute;
+    z-index:99;
+    width:100%;
+    height:100vh;
+    background:$color-txt-light;
+    animation: spindiv 3s ease-in-out forwards;
+    & img:nth-child(1){
+        width:60%;
+        opacity:1;
+        @include width-resp($breakpoint-mobile-xl,30%);
+        @include width-resp($breakpoint-tablet,25%);
+        @include width-resp($breakpoint-desktop,20%);
+    }
+    & img:nth-child(2){ 
+        max-width:30%;
+        animation: spin 6s infinite;
+        @include width-resp($breakpoint-mobile-xl,20%);
+        @include width-resp($breakpoint-tablet,10%);
+    }
+} 
