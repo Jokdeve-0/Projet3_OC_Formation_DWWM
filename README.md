@@ -2,8 +2,6 @@
 
 <p>Projet 3 OpenClassrooms  <img src="https://upload.wikimedia.org/wikipedia/fr/0/0d/Logo_OpenClassrooms.png?20210604083359" alt="OpenClassrooms" width="20"/> formation pour le titre de développeur web</p>
 
-## Dynamisez une page web avec des animations CSS
-
 ### Contenu des pages
 > - Page d’accueil (x1)
 >   - Affichage de la localisation des restaurants. À terme il sera possible de choisir sa
